@@ -6,6 +6,10 @@
 body{
     margin: 0px;
     padding: 0px;
+    display: grid;
+    gap: 4em;
+    padding-bottom: 10px;
+
 }
 nav{
     background-color: #9D4BEB;
@@ -13,6 +17,7 @@ nav{
     align-items: center;
     padding: 10px 20px;
     justify-content:space-between;
+    border-bottom: 1px solid lightgray;
 }
 
 .logo{
@@ -31,6 +36,7 @@ nav{
     display: flex;
     gap: 10px;
     align-items: center;
+    gap: 50px;
 }
 
 .menu_item a{
@@ -48,6 +54,8 @@ nav{
 .info div{
     display: flex;
     font-size: 14px;
+    align-items: center;
+    gap: 5px;
 }
 
 .callbutton{
@@ -105,7 +113,7 @@ nav{
 .bannerimage{
     content: "" !important;contain: "" !important;
 height: 60vh !important;
-background-image: url('./edu_ilastration.png.webp');
+background-image: url('./assets/img/edu_ilastration.png.webp');
 width: 100% !important; 
 
 background-size: contain;
@@ -237,13 +245,20 @@ border-bottom:1px solid lightgray;
 }
 .card{
     padding: 6px;
-box-shadow: 1px 1px 20px lightgray;
-border-radius: 10px;
+    box-shadow: 1px 1px 20px lightgray;
+    border-radius: 10px;
+}
+
+.card_wrapper{
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .card_image{
     height: 300px;
     width: 100%;
+    overflow: clip;
 }
 .rating{
     margin-top: 40px;
@@ -269,4 +284,43 @@ border-radius: 10px;
 .discount{
     text-decoration: line-through;
     color: gray;
+}
+
+.course_button{
+  height: fit-content;
+  width: fit-content;
+  padding: 20px 40px;
+  border: 1px solid #04D2C8;
+  color: #04D2C8;
+  border-radius: 50px;
+  margin: 0px auto;
+  position: relative;
+  overflow: clip;
+  transition:all.8s ease-in-out;
+}
+
+
+.empty{
+    height: 100%;
+    width: 0%;
+    content: '';
+    contain: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: all .8s ease-in-out;
+    
+}
+
+.button-text{
+    position: relative;
+    z-index: 1;
+}
+
+
+.course_button:hover .empty .button-text{
+  background-color: #04D2C8;
+  color: white;
+  width: 100%;
+
 }
