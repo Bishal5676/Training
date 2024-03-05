@@ -324,3 +324,16 @@ border-bottom:1px solid lightgray;
   width: 100%;
 
 }
+li::marker{
+    color: red;
+    font-size: 24px;
+}
+thead{
+    background-color: green;
+    color: white;
+
+}
+tbody tr td{
+    boarder:1px solid red;
+
+}
